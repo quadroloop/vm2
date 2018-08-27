@@ -73,6 +73,17 @@
 				</ul>
           </div>
 
+          <div class="col-md-4">
+          	  <h3>Results</h3>
+          	  <hr>
+          	    <p class="text-muted">
+          	    	No test has been executed yet. please connect to the device, and the parser will automatically start.
+          	    </p>
+          	    <button class="btn btn-success"><i class="fa fa-file"></i> Save Results</button>
+          	    <button class="btn btn-dark"><i class="fa fa-print"></i> Print Results</button>
+
+          </div>
+
 	 </div>
   </div>
 </body>
