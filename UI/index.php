@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="stylesheet" href="./css/bootstrap4.css">
 <link rel="stylesheet" href="./css/vm2.css">
+<link rel="stylesheet" href="./css/font-awesome.min.css">
 </head>
 <body>
 	<nav class="navbar navbar-light nav-dark">
@@ -26,17 +27,49 @@
   <div class="mx-3 mt-2 pt-2">
 	 <div class="row">
 
-	 	  <div class="col-md-4 border-right">
+	 	  <div class="col-md-4 border-right mb-2">
 	 	  	  <img src="./img/mb1.png" class="img-fluid">
 	 	  </div>
 
-          <div class="col-md-3 border-right">
-              <ul class="list-group">
-				  <li class="list-group-item">CPU / Microprocessor</li>
-				  <li class="list-group-item">RAM / Radom Access Memory</li>
-				  <li class="list-group-item">ROM / Read Only Memory</li>
-				  <li class="list-group-item">Power Input</li>
-				  <li class="list-group-item">Vestibulum at eros</li>
+          <div class="col-md-4 border-right">
+          	   <h4 class="text-primary"><i class="fa fa-slack"></i> Parts Overview</h4>
+              <ul class="list-group bg-light">
+				  <li class="list-group-item">CPU / Microprocessor 
+				  	<span class="float-right">
+				  	    <button class="btn btn-danger"><i class="fa fa-close"></i></button>
+				  	    <button class="btn btn-success"><i class="fa fa-check"></i></button>
+				  	 </span>   
+				  </li>
+				  <li class="list-group-item">Random Access Memory 
+				  	<span class="float-right">
+				  	    <button class="btn btn-danger"><i class="fa fa-close"></i></button>
+				  	    <button class="btn btn-success"><i class="fa fa-check"></i></button>
+				  	 </span>   
+				  </li>
+				  <li class="list-group-item">Read Only Memory
+				  	<span class="float-right">
+				  	    <button class="btn btn-danger"><i class="fa fa-close"></i></button>
+				  	    <button class="btn btn-success"><i class="fa fa-check"></i></button>
+				  	 </span>   
+				  </li>
+				  <li class="list-group-item">GPU
+				  	<span class="float-right">
+				  	    <button class="btn btn-danger"><i class="fa fa-close"></i></button>
+				  	    <button class="btn btn-success"><i class="fa fa-check"></i></button>
+				  	 </span>   
+				  </li>
+				  <li class="list-group-item">HDD
+				  	<span class="float-right">
+				  	    <button class="btn btn-danger"><i class="fa fa-close"></i></button>
+				  	    <button class="btn btn-success"><i class="fa fa-check"></i></button>
+				  	 </span>   
+				  </li>
+				  <li class="list-group-item">CMOS
+				  	<span class="float-right">
+				  	    <button class="btn btn-danger"><i class="fa fa-close"></i></button>
+				  	    <button class="btn btn-success"><i class="fa fa-check"></i></button>
+				  	 </span>   
+				  </li>
 				</ul>
           </div>
 
