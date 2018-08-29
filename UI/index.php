@@ -15,7 +15,6 @@
   <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon" style="color:#fff !important"></span>
   </button>
-    
       <div class="right">
       	   <button class="btn btn-primary mr-2">Assembly</button>
       	    <button class="btn btn-info mr-2">Dissassembly</button>
@@ -70,7 +69,6 @@
 				  </li>
 				</ul>
           </div>
-
           <div class="col-md-4">
           	  <h3>Results</h3>
           	  <hr>
