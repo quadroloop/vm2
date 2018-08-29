@@ -77,9 +77,7 @@
           	    </p>
           	    <button class="btn btn-success"><i class="fa fa-file"></i> Save Results</button>
           	    <button class="btn btn-dark"><i class="fa fa-print"></i> Print Results</button>
-
           </div>
-
 	 </div>
   </div>
 </body>
