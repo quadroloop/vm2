@@ -18,9 +18,9 @@
       
       <div class="right">
 
-      	   <!-- <button class="btn btn-primary mr-2">Assembly</button>
+      	   <button class="btn btn-primary mr-2">Assembly</button>
       	    <button class="btn btn-info mr-2">Dissassembly</button>
-      	    <button class="btn btn-warning mr-2">Boot</butto -->n>
+      	    <button class="btn btn-warning mr-2">Boot</button>
 
       </div>
 </nav>
