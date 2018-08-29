@@ -7,15 +7,7 @@
 <link rel="stylesheet" href="./css/font-awesome.min.css">
 </head>
 <body>
-	<nav class="navbar navbar-light nav-dark">
-  <a class="navbar-brand" href="#">
-    <img src="./img/v2.gif" width="50" height="50" class="d-inline-block align-top" alt="">
-    <span class="logo-text"> vm2</span>
-  </a><nav class="navbar navbar-light nav-dark">
-  <a class="navbar-brand" href="#">
-    <img src="./img/v2.gif" width="50" height="50" class="d-inline-block align-top" alt="">
-    <span class="logo-text"> vm2</span>
-  </a>
+	
   <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon" style="color:#fff !important"></span>
   </button>
