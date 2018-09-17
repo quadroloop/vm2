@@ -24,7 +24,9 @@
   <div class="mx-3 mt-2 pt-2">
 	 <div class="row">
 	 	  <div class="col-md-4 border-right mb-2">
-	 	  	  <img src="./img/mb1.png" class="img-fluid">
+	 	  	<img src="./img/l1.gif" class="scan">	
+	 	  	  <img src="./img/mb1.png" class="img-fluid mb">
+
 	 	  </div>
           <div class="col-md-4 border-right">
           	   <h4 class="text-primary"><i class="fa fa-slack"></i> Parts Overview</h4>
