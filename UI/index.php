@@ -15,22 +15,19 @@
   <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon" style="color:#fff !important"></span>
   </button>
-      
       <div class="right">
-
       	   <button class="btn btn-primary mr-2">Assembly</button>
       	    <button class="btn btn-info mr-2">Dissassembly</button>
       	    <button class="btn btn-warning mr-2">Boot</button>
-
       </div>
 </nav>
   <div class="mx-3 mt-2 pt-2">
 	 <div class="row">
-
 	 	  <div class="col-md-4 border-right mb-2">
-	 	  	  <img src="./img/mb1.png" class="img-fluid">
-	 	  </div>
+	 	  	<img src="./img/l1.gif" class="scan">	
+	 	  	  <img src="./img/mb1.png" class="img-fluid mb">
 
+	 	  </div>
           <div class="col-md-4 border-right">
           	   <h4 class="text-primary"><i class="fa fa-slack"></i> Parts Overview</h4>
               <ul class="list-group bg-light">
@@ -72,7 +69,6 @@
 				  </li>
 				</ul>
           </div>
-
           <div class="col-md-4">
           	  <h3>Results</h3>
           	  <hr>
@@ -81,9 +77,7 @@
           	    </p>
           	    <button class="btn btn-success"><i class="fa fa-file"></i> Save Results</button>
           	    <button class="btn btn-dark" onclick="window.print();"><i class="fa fa-print"></i> Print Results</button>
-
           </div>
-
 	 </div>
   </div>
 </body>
