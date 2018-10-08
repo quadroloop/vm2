@@ -70,7 +70,7 @@ function loadKernel(){
     println("Starting GUI...");
     // call GUI
     setTimeout(()=>{
-         location.href = "/windows";    
+         location.href = "/osx";    
     },tms+3000);
 
   }

@@ -12,6 +12,7 @@ app.use(express.static('./public/UI'));
 
 app.set('port', (process.env.PORT || 5000));
 
+http.listen(5000);
 
 
 var route = "/";
@@ -31,15 +32,22 @@ app.get(route, function(req, res) {
 
 
 
+//welcome message
+console.log("Running vm2");
+
 // Emit welcome message on connection
 io.sockets.on('connection', function(socket) {
-    socket.emit('welcome', { message: 'Welcome!' });
 
-    socket.on('fook', function() {
+    socket.broadcast.emit('welcome', { message: 'Welcome!' });
+
+    socket.on('fook', function(resx) {
       console.log('Scan event detected, cascading event');
+           io.emit('scan', { data: resx });
+
     });
+
 });
 
-http.listen(app.get('port'), function() {
-  console.log('listening on *:' + app.get('port'));
-});
+// http.listen(app.get('port'), function() {
+//   console.log('listening on *:' + app.get('port'));
+// });

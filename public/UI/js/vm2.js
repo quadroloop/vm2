@@ -1,6 +1,31 @@
 // vm2.js 
 // Author: Bryce Mericnes 2018
 
+// connect to websocket server
+
+
+
+ var socket = io();
+         
+            function transmit() {
+                socket.emit('fook', {data: found_parts});
+            }
+
+             // relay scan if origin is not you.
+            socket.on('scan', function (data) {
+              if(found_parts.length == 0){
+                 var resdata = data.data.data;
+                 resdata.forEach((item)=>{
+                   found_parts.push(item);
+                 })
+                rpc();
+              }
+           
+        });
+
+
+
+           
 var scan_state = 0;
 
  window.onload = ()=>{
@@ -29,6 +54,8 @@ var scan_state = 0;
   } 
 
    function rpc() {
+       
+
         // evaluate scan results
         var icon1state, icon2state, icon3state, icon4state ,item1state, item2state, item3state, item4state;
 
@@ -149,6 +176,7 @@ var scan_state = 0;
    }
 
 
+
  
 
        var parseCount = 0;
@@ -163,12 +191,15 @@ var scan_state = 0;
      }  
 
 
+
     var cmd = document.body;
     cmd.addEventListener("keydown", function (e) {
     if (e.keyCode === 86) {
        if(scan_state == 1){
     	    location.reload();
        }else{
+         // broadcast event
+         transmit();
          rpc();
        }
     	}

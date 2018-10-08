@@ -1,7 +1,7 @@
   <script src="./lib/jquery/jquery.min.js"></script>
 <style type="text/css">
 	body {
-  background: url(https://harnerdesigns.com/wp-content/uploads/2018/05/universe-wallpaper.jpg) center center/cover fixed no-repeat;
+  background: url(universe-wallpaper.jpg) center center/cover fixed no-repeat;
   font-family: 'Helvetica', sans-serif;
   margin: 0;
   overflow: hidden;
@@ -483,8 +483,8 @@ footer img:hover {
 				</li>
 		</ul>
 		<ul class="right">
-				<li><a href="https://www.codepen.io/jackharner" target='_blank'><i class="fa fa-codepen"></i></a></li>
-				<li><a href="https://www.twitter.com/jackharner" target='_blank'><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://github.com/quadroloop" target='_blank'><i class="fa fa-codepen"></i></a></li>
+				<li><a href="https://github.com/quadroloop" target='_blank'><i class="fa fa-twitter"></i></a></li>
 				<li id="volume-icon-li"><i class="fa fa-volume-off" id="volume-icon"></i>
 						<div class="submenu">
 								<ul class="volume">
@@ -507,10 +507,10 @@ footer img:hover {
 								</ul>
 						</div>
 				</li>
-				<li>Jack Harner
+				<li>Bryce Mercines
 						<div class="submenu">
 								<ul>
-										<li><a href="https://harnerdesigns.com/" target="_blank">Website</a></li>
+										<li><a href="https://github.com/quadroloop" target="_blank">Website</a></li>
 								</ul>
 						</div>
 				</li>
@@ -661,5 +661,11 @@ $("#volume").on("change mousemove", function() {
 		}
 });
 
-// jackHarnerSig();
+// reset of button is clicked
+ var cmd = document.body;
+    cmd.addEventListener("keydown", function (e) {
+    if (e.keyCode === 86) {
+    	  location.href="/";
+        }
+    	}); 
 </script>
