@@ -1029,3 +1029,51 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: none;
   padding: 0px;
 }
+
+#pulseArray {
+  display: none;
+}
+
+.errorx {
+  background-color: rgba(228, 118, 108, 0.67);
+  color: #fff;
+}
+
+    #scan_state {
+       position: absolute;
+       top: 20px;
+       right: 20px;
+       cursor: pointer;
+    }
+
+    #cast {
+       border: 1px solid #333;
+       border-radius: 50px;
+       padding: 8px;
+       transition: 0.8s;
+    }
+
+    #about {
+      display: none;
+    }
+
+  #cast:hover {
+    background-color: lightblue;
+    transition: 0.8s;
+  }
+
+  #boot {
+    font-size: 15px;
+  }
+
+  #boot a {
+        color: #fff;
+  }
+
+  .text-y{
+    color: lime;
+  }
+
+  .text-n {
+    color: red;
+  }

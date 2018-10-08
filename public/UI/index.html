@@ -61,6 +61,13 @@
         <div id="statusbar" class="actions animated bounce">
           <a href="#services" id="status" class="btn-services animated delay-1200"><i class="fa fa-circle text-info"></i> Waiting for scan command</a>
         </div>
+          <div id="pulseArray" class="animated">
+           <a class="pulserx animated fadeIn delay-200"><i class="fa fa-circle"></i></a>
+           <a class="pulserx animated fadeIn delay-400"><i class="fa fa-circle"></i></a>
+           <a class="pulserx animated fadeIn delay-600"><i class="fa fa-circle"></i></a>
+           <a class="pulserx animated fadeIn delay-800"><i class="fa fa-circle"></i></a>
+         </div>
+          
       </div>
     </div>
   </section>
@@ -68,29 +75,15 @@
   <!--==========================
   Header Section
   ============================-->
-
- <style>
-    #scan_state {
-       position: absolute;
-       top: 20px;
-       right: 20px;
-    }
-
-    #cast {
-       border: 1px solid #333;
-       border-radius: 50px;
-       padding: 8px;
-    }
- </style>
-
- <div id="appx"> 
+<div id="appx"> 
+  <a id="axios" style="display: none;" src=""></a>
   <header id="header" class="animated">
     <div class="container">
 
       <div id="logo" class="pull-left">
         <a href="#hero"><img src="./img/logo.png" alt="" title="" /></a>
         <div id="scan_state">
-           <p class="text-white" id="cast"><i class="fa fa-circle text-info"></i> Motherboard</p>
+           <p class="text-white" id="cast" onclick="switchMode()"><i class="fa fa-circle text-info"></i> Motherboard Diagnostics</p>
          </div>
       </div>
     </div>
@@ -109,23 +102,10 @@
         <div class="col-md-6 about-content">
         	    <h4 class="text-primary animated fadeInUp delay-100"><i class="fa fa-slack"></i> Parts Overview</h4>
               <ul class="list-group bg-light">
-
-           <li class="list-group-item  animated fadeInUp delay-100">
-            <i class="fa fa-circle text-muted"></i> PS / Power Supply (ATX)
-          </li>
-
-
-          <li class="list-group-item  animated fadeInUp delay-300">
-            <i class="fa fa-circle text-info"></i> CPU / Microprocessor 
-          </li>
-
-          <li class="list-group-item  animated fadeInUp delay-500">
-            <i class="fa fa-circle text-warning"></i> RAM / Random-Access Memory 
-          </li>
-
-          <li class="list-group-item  animated fadeInUp delay-700">
-            <i class="fa fa-circle text-success"></i> ROM / Read-Only Mermory
-          </li>
+ 
+          <div id="parts">
+          
+        </div>
 
     
         
@@ -145,17 +125,10 @@
 
   
    <div id="OS">
-    <div class="container about-container" style="background-color:black;height: 100vh;height: 100vw;">
-      <p>Booting os...</p>
-      <p>Booting os...</p>
-      <p>Booting os...</p>
-      <p>Booting os...</p>
-      <p>Booting os...</p>
-      <p>Booting os...</p>
-      <p>Booting os...</p>
-      <p>Booting os...</p>
-      <p>Booting os...</p>
-      <p>Booting os...</p>
+    <div class="container about-container" style="background-color:black;height: 100%;">
+          <!-- boot console -->
+          <div id="boot">
+          </div>
     </div>
   </div>
 
@@ -176,87 +149,11 @@
   <!-- Template Specisifc Custom Javascript File -->
   <script src="./js/custom.js"></script>
  <script src="./js/axios.js"></script>
-
   <script>
-   window.onload = ()=>{
-  		// document.getElementById("appz").focus();
-  	}
-
-
-
-       
-
-   function rpc() {
-       axios.get("sockets.php");
-        // animate in trigger event
-
-        document.getElementById("vm2logo").classList.add("fadeOutUp");
-        document.getElementById("bannerx").classList.add("fadeOutUp");
-        document.getElementById("statusbar").classList.add("delay-200");
-        document.getElementById("statusbar").classList.add("fadeUp");
-        document.getElementById("status").classList.add("delay-400");
-        document.getElementById("status").classList.add("bounceOut");
-
-
-         setTimeout(()=>{
-          document.getElementById("loader").style.display = "block";
-         },2000);
-
-         
-         setTimeout(()=>{
-            document.getElementById("banner").classList.add("fadeOut");
-       document.getElementById("hero").classList.add("fadeOut");
-       document.getElementById("hero").classList.add("slower");
-
-         },4000);
-
-
-
-      
-          setTimeout(()=>{
-            document.getElementById("banner").style.display = "none";
-            document.getElementById("hero").style.display = "none";
-            document.getElementById("appx").style.display = "block";
-
-          },5000)           
-
-   }
-
-
-    function lpc() {
-       document.getElementById("banner").classList.add("fadeOut");
-                    document.getElementById("banner").classList.add("slow");
-          document.getElementById("hero").classList.add("fadeOut");
-                    document.getElementById("hero").classList.add("slower");
-
-          setTimeout(()=>{
-            document.getElementById("banner").style.display = "none";
-            document.getElementById("hero").style.display = "none";
-            document.getElementById("appx").style.display = "block";
-
-          },1000)           
-
-   }
-
-
- // setInterval(()=>{
- //       axios.get("socket.c")
- //       .then((res)=>{
- //          if(res.data != localStorage.socket){
- //              lpc();
- //              localStorage.socket = res.data;
- //          }
- //       });
- //    },200);
-
-    var cmd = document.body;
-    cmd.addEventListener("keydown", function (e) {
-    if (e.keyCode === 86) { 
-    	   rpc();
-    	}
-    });
-   
+      var found_parts = [];
   </script>
+  <script src="./js/kernel.js"></script>
+  <script src="./js/vm2.js"></script>
 
 
 </body>
