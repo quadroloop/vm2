@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>vm2</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+      <meta name="theme-color" content="#000">
+
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  
+  <!-- Bootstrap CSS File -->
+  <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="./lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="./lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="preloader"></div>
+
+ <!-- Splash sectiob -->
+  <section id="hero" class="animated">
+    <div class="hero-container">
+      <div class="animated" id="banner">
+        <div class="hero-logo animated fadeInUp delay-100">
+          <img id="vm2logo" src="img/logo.png" alt="Imperial" width="180px" class="animated delay-100">
+
+          <center>
+           <img src="./img/preloader.svg" id="loader" class="animated bounceIn">
+          </center> 
+         </div>
+        <p id="bannerx" class="animated fadeInUp delay-300"><span class="rotating animated delay-300" style="color: #fff">
+        Virtual Machine 2,
+        Arduino-based Computer Motherboard Trainer,
+        Built with Arduino C++ and Web Technology</span></p>
+        <div id="statusbar" class="actions animated bounce">
+          <a href="#services" id="status" class="btn-services animated delay-1200"><i class="fa fa-circle text-info"></i> Waiting for scan command</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+  Header Section
+  ============================-->
+
+ <style>
+    #scan_state {
+       position: absolute;
+       top: 20px;
+       right: 20px;
+    }
+
+    #cast {
+       border: 1px solid #333;
+       border-radius: 50px;
+       padding: 8px;
+    }
+ </style>
+
+ <div id="appx"> 
+  <header id="header" class="animated">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <a href="#hero"><img src="./img/logo.png" alt="" title="" /></a>
+        <div id="scan_state">
+           <p class="text-white" id="cast"><i class="fa fa-circle text-info"></i> Motherboard</p>
+         </div>
+      </div>
+    </div>
+</header>
+  <!--==========================
+    Motherboard overview section
+  ============================-->
+  <section id="about">
+    <div class="container about-container">
+      <div class="row">
+
+        <div class="col-lg-6 about-img animated fadeIn">
+          <img src="./img/mb1.png" alt="">
+        </div>
+
+        <div class="col-md-6 about-content">
+        	    <h4 class="text-primary animated fadeInUp delay-100"><i class="fa fa-slack"></i> Parts Overview</h4>
+              <ul class="list-group bg-light">
+
+           <li class="list-group-item  animated fadeInUp delay-100">
+            <i class="fa fa-circle text-muted"></i> PS / Power Supply (ATX)
+          </li>
+
+
+          <li class="list-group-item  animated fadeInUp delay-300">
+            <i class="fa fa-circle text-info"></i> CPU / Microprocessor 
+          </li>
+
+          <li class="list-group-item  animated fadeInUp delay-500">
+            <i class="fa fa-circle text-warning"></i> RAM / Random-Access Memory 
+          </li>
+
+          <li class="list-group-item  animated fadeInUp delay-700">
+            <i class="fa fa-circle text-success"></i> ROM / Read-Only Mermory
+          </li>
+
+    
+        
+       
+          
+        </ul>
+ 
+          <h4 class="text-primary animated fadeInUp delay-1000"><i class="fa fa-cogs"></i> Tools</h4>
+          <button class="btn btn-lg animated bounceIn delay-1200 bg-primary" onclick="window.print();"><i class="fa fa-print"></i> Print Results</button>
+                    <button class="btn btn-lg animated bounceIn delay-1500 bg-primary" onclick="window.location.reload();"><i class="fa fa-home"></i> Return Home</button>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+   <div id="OS">
+    <div class="container about-container" style="background-color:black;height: 100vh;height: 100vw;">
+      <p>Booting os...</p>
+      <p>Booting os...</p>
+      <p>Booting os...</p>
+      <p>Booting os...</p>
+      <p>Booting os...</p>
+      <p>Booting os...</p>
+      <p>Booting os...</p>
+      <p>Booting os...</p>
+      <p>Booting os...</p>
+      <p>Booting os...</p>
+    </div>
+  </div>
+
+
+</div>
+
+
+  <!-- Required JavaScript Libraries -->
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./lib/superfish/hoverIntent.js"></script>
+  <script src="./lib/superfish/superfish.min.js"></script>
+  <script src="./lib/morphext/morphext.min.js"></script>
+  <script src="./lib/wow/wow.min.js"></script>
+  <script src="./lib/stickyjs/sticky.js"></script>
+  <script src="./lib/easing/easing.js"></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="./js/custom.js"></script>
+ <script src="./js/axios.js"></script>
+
+  <script>
+   window.onload = ()=>{
+  		// document.getElementById("appz").focus();
+  	}
+
+
+
+       
+
+   function rpc() {
+       axios.get("sockets.php");
+        // animate in trigger event
+
+        document.getElementById("vm2logo").classList.add("fadeOutUp");
+        document.getElementById("bannerx").classList.add("fadeOutUp");
+        document.getElementById("statusbar").classList.add("delay-200");
+        document.getElementById("statusbar").classList.add("fadeUp");
+        document.getElementById("status").classList.add("delay-400");
+        document.getElementById("status").classList.add("bounceOut");
+
+
+         setTimeout(()=>{
+          document.getElementById("loader").style.display = "block";
+         },2000);
+
+         
+         setTimeout(()=>{
+            document.getElementById("banner").classList.add("fadeOut");
+       document.getElementById("hero").classList.add("fadeOut");
+       document.getElementById("hero").classList.add("slower");
+
+         },4000);
+
+
+
+      
+          setTimeout(()=>{
+            document.getElementById("banner").style.display = "none";
+            document.getElementById("hero").style.display = "none";
+            document.getElementById("appx").style.display = "block";
+
+          },5000)           
+
+   }
+
+
+    function lpc() {
+       document.getElementById("banner").classList.add("fadeOut");
+                    document.getElementById("banner").classList.add("slow");
+          document.getElementById("hero").classList.add("fadeOut");
+                    document.getElementById("hero").classList.add("slower");
+
+          setTimeout(()=>{
+            document.getElementById("banner").style.display = "none";
+            document.getElementById("hero").style.display = "none";
+            document.getElementById("appx").style.display = "block";
+
+          },1000)           
+
+   }
+
+
+ // setInterval(()=>{
+ //       axios.get("socket.c")
+ //       .then((res)=>{
+ //          if(res.data != localStorage.socket){
+ //              lpc();
+ //              localStorage.socket = res.data;
+ //          }
+ //       });
+ //    },200);
+
+    var cmd = document.body;
+    cmd.addEventListener("keydown", function (e) {
+    if (e.keyCode === 86) { 
+    	   rpc();
+    	}
+    });
+   
+  </script>
+
+
+</body>
+
+</html>
