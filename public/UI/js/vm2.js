@@ -1,6 +1,8 @@
 // vm2.js 
 // Author: Bryce Mericnes 2018
 
+var scan_state = 0;
+
  window.onload = ()=>{
   	  if(localStorage.mode) {
          if(localStorage.mode == "os"){
@@ -124,6 +126,8 @@
                 loadKernel();
             }
 
+            scan_state =1;
+
           },5000)           
 
    }
@@ -145,15 +149,7 @@
    }
 
 
- // setInterval(()=>{
- //       axios.get("socket.c")
- //       .then((res)=>{
- //          if(res.data != localStorage.socket){
- //              lpc();
- //              localStorage.socket = res.data;
- //          }
- //       });
- //    },200);
+ 
 
        var parseCount = 0;
 
@@ -169,8 +165,12 @@
 
     var cmd = document.body;
     cmd.addEventListener("keydown", function (e) {
-    if (e.keyCode === 86) { 
-    	   rpc();
+    if (e.keyCode === 86) {
+       if(scan_state == 1){
+    	    location.reload();
+       }else{
+         rpc();
+       }
     	}
  
       // part is found
@@ -181,7 +181,7 @@
      } 
 
      // part is not found 
-    if(e.keyCode === 187){
+    if(e.keyCode === 107){
        parseCount++;
        found_parts.push(false);  
        pulseLoader();

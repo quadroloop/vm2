@@ -19,9 +19,14 @@ app.get(route, function(req, res) {
   res.sendFile(path.join(__dirname, './public/UI/index.html'));
 });
 
-var route = "/admin";
+var route = "/windows";
 app.get(route, function(req, res) {
-  res.sendFile(path.join(__dirname, './public/admin/examples/index.html'));
+  res.sendFile(path.join(__dirname, './public/UI/windows.html'));
+});
+
+var route = "/osx";
+app.get(route, function(req, res) {
+  res.sendFile(path.join(__dirname, './public/UI/osx.html'));
 });
 
 
