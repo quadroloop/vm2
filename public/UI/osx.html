@@ -1,4 +1,26 @@
   <script src="./lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="socket.io.js"></script>
+  <script type="text/javascript">
+   
+   var socket = io();
+         
+          
+          // bring back to start screen
+            function revert() {
+               socket.emit("revert",{data: "reload"});
+            }
+
+                         // relay scan if origin is not you.
+
+
+            // transfer back to homepage
+            socket.on("revert", function(){
+               location.href = "/";
+            });  
+           
+       
+
+  </script>
 <style type="text/css">
 	body {
   background: url(universe-wallpaper.jpg) center center/cover fixed no-repeat;
@@ -665,7 +687,7 @@ $("#volume").on("change mousemove", function() {
  var cmd = document.body;
     cmd.addEventListener("keydown", function (e) {
     if (e.keyCode === 86) {
-    	  location.href="/";
+    	  revert();
         }
     	}); 
 </script>

@@ -7,11 +7,18 @@
 
  var socket = io();
          
+            // broadcast scan event
             function transmit() {
                 socket.emit('fook', {data: found_parts});
             }
 
-             // relay scan if origin is not you.
+          // bring back to start screen
+            function revert() {
+               socket.emit("revert",{data: "reload"});
+            }
+
+                         // relay scan if origin is not you.
+
             socket.on('scan', function (data) {
               if(found_parts.length == 0){
                  var resdata = data.data.data;
@@ -20,6 +27,10 @@
                  })
                 rpc();
               }
+
+            socket.on("revert", function(){
+               location.reload();
+            });  
            
         });
 
@@ -196,6 +207,7 @@ var scan_state = 0;
     cmd.addEventListener("keydown", function (e) {
     if (e.keyCode === 86) {
        if(scan_state == 1){
+          revert();
     	    location.reload();
        }else{
          // broadcast event

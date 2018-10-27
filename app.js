@@ -8,6 +8,11 @@ var bodyParser = require('body-parser');
 app.use(express.static('public'));
 app.use(express.static('./public/UI'));
 
+// for networking theory demo
+
+app.use(express.static('./public/public/UI/delta/'));
+
+
 
 
 app.set('port', (process.env.PORT || 5000));
@@ -30,10 +35,21 @@ app.get(route, function(req, res) {
   res.sendFile(path.join(__dirname, './public/UI/osx.html'));
 });
 
+var route = "/delta";
+app.get(route, function(req, res) {
+  res.sendFile(path.join(__dirname, './public/UI/delta/delta.html'));
+});
 
+
+var port = 5000;
 
 //welcome message
-console.log("Running vm2");
+console.log("=======================")
+console.log("     Running vm2       ");
+console.log("=======================")
+console.log("  vm2 server v.0.0.1");
+console.log("------------------------");
+console.log("listening on port: "+port);
 
 // Emit welcome message on connection
 io.sockets.on('connection', function(socket) {
@@ -44,6 +60,11 @@ io.sockets.on('connection', function(socket) {
       console.log('Scan event detected, cascading event');
            io.emit('scan', { data: resx });
 
+    });
+
+    socket.on("revert", (data)=>{
+    	console.log("revert requested, by VM!");
+    	io.emit("revert",{data: "reload all"});
     });
 
 });
