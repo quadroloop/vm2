@@ -109,3 +109,8 @@ console.log(`
    after this they must be able to access the 
    vm2 web application.
   `);
+
+const opn = require('opn');
+
+opn(`http://${ip}:5000`);
+
